@@ -8,10 +8,10 @@
 
 (let ((bg            "#f7f7f7")
       (fg            "#141314")
-      (invisibles    "#f8f9dc")
+      (invisibles    "#a8a8a8")
       (comments      "#967bb2")
-      (lineHighlight "#bfd9fa")
-      (selection     "#967bb2")
+      (lineHighlight "#f8f9dc")
+      (selection     "#bfd9fa")
       (keyword       "#374ff4")
       (number        "#bb5f0b")
       (string        "#bd176b")
@@ -39,7 +39,9 @@
  `(font-lock-variable-name-face ((t (:foreground ,fg))))
  `(font-lock-variable-use-face ((t (:foreground ,fg))))
  `(font-lock-preprocessor-face ((t (:foreground ,keyword))))
- `(font-lock-type-face ((t (:foreground ,keyword))))		   
+ `(font-lock-type-face ((t (:foreground ,keyword))))
+
+ `(region ((t (:background ,selection :foreground nil))))
  )
 )
 

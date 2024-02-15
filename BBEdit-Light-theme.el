@@ -1,12 +1,15 @@
 ;; BBEdit-Light-theme.el - port of BBEdit 11 default theme to emacs
 ;; Author: Dilluti0n <hskimse1@gmail.com>
 ;; URL: https://github.com/dilluti0n/emacs-BBEdit-Light-theme
-;; Version: 0.1
+;; Version: 0.1.1
 
 (deftheme BBEdit-Light
-  "port of BBEdit 11 default color theme to emacs.")
+  "port of BBEdit 11 default color scheme to emacs.")
+
+(global-hl-line-mode 1)
 
 (let ((bg            "#f7f7f7")
+      (fg+2          "#636363")
       (fg            "#141314")
       (invisibles    "#a8a8a8")
       (comments      "#967bb2")
@@ -21,6 +24,7 @@
       (PPline        "#d02325")
       (PPdirective   "#2738b0")
       (constants     "#346ab9")
+      (line-num-bg   "#d2d2d2")
       )
 (custom-theme-set-faces
  'BBEdit-Light
@@ -39,8 +43,13 @@
  `(font-lock-preprocessor-face ((t (:foreground ,keyword))))
  `(font-lock-type-face ((t (:foreground ,keyword))))
  ;; for highlight-numbers package
-   `(highlight-numbers-number ((t (:foreground ,number))))
+ `(highlight-numbers-number ((t (:foreground ,number))))
+ ;; regions...
+ `(hl-line ((t (:background ,lineHighlight))))
  `(region ((t (:background ,selection :foreground nil))))
+ ;; line-numbers
+ `(line-number-current-line ((t (:background ,line-num-bg :foreground ,fg))))
+ `(line-number ((t (:foreground ,fg+2))))
  )
 )
 

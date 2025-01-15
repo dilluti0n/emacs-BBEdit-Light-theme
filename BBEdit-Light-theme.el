@@ -6,8 +6,6 @@
 (deftheme BBEdit-Light
   "port of BBEdit 11 default color scheme to emacs.")
 
-(global-hl-line-mode 1)
-
 (let ((bg            "#f7f7f7")
       (fg+2          "#636363")
       (fg            "#141314")
